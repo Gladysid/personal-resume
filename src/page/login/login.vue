@@ -1,23 +1,31 @@
 <template>
   <div id="back">
-    <div class="header" :style="back">
+    <!-- <div class="header" :style="back">
        <div class="title"><b>登录</b></div>
-    </div>
+    </div> -->
+    <div class="loginContainer">
+       <div class="loginContainer1">
+       <p>Gladys的简历</p>
+       <div class="loginCard">
+         <p><b>登录</b></p>
+         <form class="login" v-on:submit.prevent="submit">
+            <div class="line">
+              <!-- 点击了按钮并且id为空时显示“id不能为空” -->
+              <div v-show="btn && !form.id">id不能为空</div>
+              <input type="number" placeholder="请输入id" v-model="form.id">
+            </div>
 
-    <div>
-      <form class="login" v-on:submit.prevent="submit">
-          <div class="line">
-             <div v-show="btn && !form.id">id不能为空</div>
-             <input type="number" placeholder="请输入id" v-model="form.id">
-          </div>
+            <div class="line">
+              <div v-show="btn && !form.psw">密码不能为空</div>
+              <input type="password" placeholder="请输入密码"  v-model="form.psw">
+            </div>
 
-          <div class="line">
-             <div v-show="btn && !form.psw">密码不能为空</div>
-             <input type="password" placeholder="请输入密码" v-model="form.psw">
-          </div>
-
-          <button class="button">登录</button>
-      </form>
+            <div class="line">
+             <button class="button">登录</button>
+            </div>
+          </form>
+       </div>
+       </div>
     </div>
 
   </div>
@@ -50,7 +58,7 @@ export default {
      submit(){
          this.btn = true;
          if(!this.form.id || !this.form.psw)return;
-         this.$router.replace({path:'/index'})
+         this.$router.replace({path:'/incompleted'})
      }
    }
     
@@ -58,35 +66,66 @@ export default {
 </script>
 
 <style lang="less" scoped>
- .header {
-		position: relative;
-		line-height: 38px;
-		color: white;
-		text-align: center;
-        background: #222;
- }
+
+.loginCard{
+    width: 320px;
+    height: 350px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+  
+}
+.loginCard p{
+    font-size: 20px;
+    margin-right: 250px;
+   
+    
+}
+
+
+.loginContainer1{
+text-align: center;
+margin-top: 50px;
+}
+
+.loginContainer1 p{
+    font-size: 20px;
+}
 
  .login {
-		padding: 50px;
-		text-align: center;
+		padding: 0px;
+        text-align: center;
+        margin: auto;
+        // border: 1px solid green;
         .line {
-			padding: 5px;
+            margin: auto;
+            // border: 1px solid green;
+            width: 320px;
 			input {
-				padding: 0 10px;
-                line-height: 28px;
+				
+                line-height: 30px;
+                width: 300px;
+                margin: 5px;
                 background-color: white;
+                border: 1px solid gray;
+                border-radius: 5px;
+               
 			}
         }
 
 }
 
 .button {
-    background-color:#4A708B	;
+    background-color:#32CD32	;
     font-size: 15px;
-    border-radius: 8px;
-    padding:5px 75px;
+    border-radius: 5px;
+    line-height: 30px;
+    margin: 5px;
     color: white;
-
+    width: 300px;
+    margin-top: 10px;
+    border: 1px solid gray;
+    
 }
 
 .button:hover {
@@ -94,12 +133,11 @@ export default {
 }
 
 #back {
- background:url('../../assets/background-pic.jpg');
+ background-color:#EDEDED;
  background-size:100% 100%;
  height: 100%;
  position:fixed;
  width:100%
-
 }
 
 </style>

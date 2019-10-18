@@ -27,6 +27,7 @@ export default {
 
         }
     },
+    
     components:{
         about,
         knowMore,
@@ -35,8 +36,11 @@ export default {
         skill,
         contact
     }
-    
+   
+          
 }
+
+
 </script>
 
 <style scoped>

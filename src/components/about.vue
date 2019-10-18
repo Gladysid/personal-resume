@@ -6,7 +6,7 @@
           <ul>
               <li><a href="#about">首页</a></li>
               <li><a href="#know">关于我</a></li>
-              <li><a href="#education">教育背景</a></li>
+              <li><a href="#education">我的经历</a></li>
               <li><a href="#project">我的作品</a></li>
               <li><a href="#skill">个人技能</a></li>
               <li><a href="#contact">联系我</a></li>
@@ -19,7 +19,10 @@
        </div>
        
        <div class="banner">
-         <div class="avator"><img src="../assets/Me.jpg" alt="人像图片"></div>
+         <div class="rotate-wrap">
+           <div class="front circle" style="transform: translateZ(5px);"></div>
+           <div class="reverse circle"></div>
+         </div>
          <div class="info">
            <h1>{{info.Name}}</h1>
            <ul>
@@ -61,16 +64,16 @@ export default {
 
 <style>
 #about {
-  background: url("../assets/computer1.jpg");
+  background: url("../assets/last-pic-1.jpg");
   background-size: cover;
-  height: 710px;
+  height: 600px;
   width: 100%;
   color: white;
 }
 
 .nav-center {
-  background-color: #ffe7ba;
-  opacity: 0.5;
+  background-color: #f1f1f1;
+  opacity: 0.7;
   border: 1px solid black;
   width: 100%;
   height: 50px;
@@ -82,7 +85,6 @@ export default {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  color: black;
   margin: auto;
 }
 .nav-center ul li {
@@ -92,11 +94,24 @@ export default {
 .nav-center ul li a {
   padding: 14px 16px;
   text-decoration: none;
+  color: black;
 }
+.nav-center ul li a:hover {
+  /* background-color: 	#7CCD7C; */
+  color: #32CD32;
+}
+/* .nav-center ul li a:active {
+  color: #fff;
+} */
+
 
 .login {
   color: black;
   margin: auto 20px;
+}
+
+.login:hover {
+  color: #32CD32;
 }
 
 .banner {
@@ -112,11 +127,13 @@ export default {
   z-index: 1;
 }
 .avator img {
-  width: 50%;
-  height: 50%;
+  width: 350px;
   border: 5px solid rgba(255, 255, 255, 0.68);
-  /* border-radius: 50%; */
+  /* 实现图片变圆形，前提是图片宽度和高度相等 */
+  border-radius: 50%;
+  margin-top: 30px;
 }
+
 .info {
   float: right;
   width: 60%;
@@ -125,12 +142,13 @@ export default {
 }
 h1 {
   font-size: 34px;
-  font-family: "Overlock", cursive;
+  font-family: "Overlock",cursive;
   color: 	white;
 }
 .info ul {
   margin-top: 10px;
-  border-top: 1px solid #fff;
+  /* 显示ul的上边框 */
+  border-top: 1px solid white;
   color: 	white;
 }
 .info ul li {
@@ -146,5 +164,56 @@ h1 {
 .info ul li span:hover {
   color: #03a9f4;
 }
+
+.rotate-wrap {
+            width: 100px;
+            height: 100px;
+            /* margin: 100px; */
+            transform-style: preserve-3d;
+            animation: rotate 5s linear infinite;
+            position: absolute;
+            margin-top: 100px;
+            left: 250px;
+        }
+
+        .rotate-wrap:hover {
+            animation-play-state: paused;
+        }
+
+        .rotate-wrap .front,
+        .rotate-wrap .reverse {
+            width: 250px;
+            height: 250px;
+            background-size: cover;
+        }
+
+        .rotate-wrap .front {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-image: url('../assets/Me.jpg');
+        }
+
+        .rotate-wrap .reverse {
+          
+            background-image: url('../assets/Me1.jpg');
+        }
+
+        .circle {
+            border-radius: 50%;
+        }     
+
+        @keyframes rotate {
+            0% {
+                transform: rotateY(0deg);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+
 </style>
 

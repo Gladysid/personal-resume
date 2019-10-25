@@ -58,7 +58,14 @@ export default {
      submit(){
          this.btn = true;
          if(!this.form.id || !this.form.psw)return;
-         this.$router.replace({path:'/incompleted'})
+        //  localStorage.setItem('id',this.form.id);
+        //  this.$router.replace({path:'/incompleted'})
+        this.$router.push({
+            name:"incompleted",
+            params:{
+                id:this.form.id
+            }
+        })
      }
    }
     

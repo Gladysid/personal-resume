@@ -198,7 +198,7 @@ h1 {
 
         .rotate-wrap .reverse {
           
-            background-image: url('../assets/Me1.jpg');
+            background-image: url('../assets/Me.jpg');
         }
 
         .circle {

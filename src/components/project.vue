@@ -10,9 +10,16 @@
           </div>
 
           <div class="projectContent">
-              <p class="projectName"><b>项目名称：</b>娴余</p>
-              <p class="projectName"><b>项目描述：</b>娴余是一个微信小程序，目的是让闲置物品得到更好的利用。</p>
+              <p class="projectName"><b>娴余小程序</b></p>
+              <p class="projectName"><b>项目描述：</b>娴余是一个微信小程序，为了让闲置物品得到更好的利用，于是利用自己所学的知识开发了这个小程序。技术
+          要求包括获取用户信息、实现页面跳转、页面刷新和继续加载、轮播图、横竖向滚动等</p>
               <p class="projectName"><b>实现技术：</b>微信小程序</p>
+              <div class="projectName">
+              <p><b>难点与解决：</b></p>
+              <p>①获取微信用户信息，使用wx.getUserInfo()</p> 
+<p>②使用scroll-view的bindscrolltolower和bindscrolltoupper属性给本地fake数据实现刷新和继续加载效果</p>
+<p>③横向滚动直接使用scroll-x属性并不能实现，父元素需要使用white-space属性且子元素使用display属性</p>
+              </div>
           </div>
 
         </div>
@@ -94,9 +101,6 @@ export default {
 }
 .projectBox {
   display: flex;
-  border: 1px solid blueviolet;
-  /* width: 1200px;
-  height: 100%; */
   margin-top: 60px;
 }
 

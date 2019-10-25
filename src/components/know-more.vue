@@ -14,11 +14,11 @@
           </swiper-slide>
 
           <swiper-slide>
-            <p><b>我的优势？</b>拥有自主的学习能力、研究过github上开源项目、会后端部署</p>
+            <p><b>我的优势？</b>拥有自主的学习能力、研究过github上开源项目、会项目部署</p>
           </swiper-slide>
 
           <swiper-slide>
-            <p><b>我的缺点？</b>不会理财、方向感不太好</p>
+            <p><b>我的缺点？</b>有点健忘，很多时候都会把要做的事情记录下来</p>
           </swiper-slide>
 
           <swiper-slide>

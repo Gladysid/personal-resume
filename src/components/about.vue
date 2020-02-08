@@ -12,7 +12,7 @@
               <li><a href="#contact">联系我</a></li>
           </ul>
           <div class="login" @click="toLogin" >
-            <span>登录</span>
+            <span>退出</span>
                  |
             <span>注册</span>
           </div>
@@ -98,12 +98,11 @@ export default {
 }
 .nav-center ul li a:hover {
   /* background-color: 	#7CCD7C; */
-  color: #32CD32;
+  color: #32cd32;
 }
 /* .nav-center ul li a:active {
   color: #fff;
 } */
-
 
 .login {
   color: black;
@@ -111,7 +110,7 @@ export default {
 }
 
 .login:hover {
-  color: #32CD32;
+  color: #32cd32;
 }
 
 .banner {
@@ -138,18 +137,17 @@ export default {
   float: right;
   width: 60%;
   text-align: left;
- 
 }
 h1 {
   font-size: 34px;
-  font-family: "Overlock",cursive;
-  color: 	white;
+  font-family: "Overlock", cursive;
+  color: white;
 }
 .info ul {
   margin-top: 10px;
   /* 显示ul的上边框 */
   border-top: 1px solid white;
-  color: 	white;
+  color: white;
 }
 .info ul li {
   font-size: 20px;
@@ -159,61 +157,57 @@ h1 {
   display: inline-block;
   font-family: "Overlock", cursive;
   margin-right: 10px;
-  
 }
 .info ul li span:hover {
   color: #03a9f4;
 }
 
 .rotate-wrap {
-            width: 100px;
-            height: 100px;
-            /* margin: 100px; */
-            transform-style: preserve-3d;
-            animation: rotate 5s linear infinite;
-            position: absolute;
-            margin-top: 100px;
-            left: 250px;
-        }
+  width: 100px;
+  height: 100px;
+  /* margin: 100px; */
+  transform-style: preserve-3d;
+  animation: rotate 5s linear infinite;
+  position: absolute;
+  margin-top: 100px;
+  left: 250px;
+}
 
-        .rotate-wrap:hover {
-            animation-play-state: paused;
-        }
+.rotate-wrap:hover {
+  animation-play-state: paused;
+}
 
-        .rotate-wrap .front,
-        .rotate-wrap .reverse {
-            width: 250px;
-            height: 250px;
-            background-size: cover;
-        }
+.rotate-wrap .front,
+.rotate-wrap .reverse {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+}
 
-        .rotate-wrap .front {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background-image: url('../assets/Me.jpg');
-        }
+.rotate-wrap .front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("../assets/Me.jpg");
+}
 
-        .rotate-wrap .reverse {
-          
-            background-image: url('../assets/Me.jpg');
-        }
+.rotate-wrap .reverse {
+  background-image: url("../assets/Me.jpg");
+}
 
-        .circle {
-            border-radius: 50%;
-        }     
+.circle {
+  border-radius: 50%;
+}
 
-        @keyframes rotate {
-            0% {
-                transform: rotateY(0deg);
-            }
-            100% {
-                transform: rotateY(360deg);
-            }
-        }
-
-
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
 </style>
 

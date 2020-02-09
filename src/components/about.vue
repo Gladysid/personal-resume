@@ -12,7 +12,7 @@
               <li><a href="#contact">联系我</a></li>
           </ul>
           <div class="login" @click="toLogin" >
-            <span>退出</span>
+            <span>登录</span>
                  |
             <span>注册</span>
           </div>

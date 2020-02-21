@@ -3,13 +3,14 @@
     <!-- <div class="container"> -->
       <!-- <slot></slot> -->
        <div class="nav-center">
+          <div class="blogName"><h3>Gladys博客</h3></div>
           <ul>
-              <li><a href="#about">首页</a></li>
-              <li><a href="#know">关于我</a></li>
-              <li><a href="#education">我的经历</a></li>
-              <li><a href="#project">我的作品</a></li>
-              <li><a href="#skill">个人技能</a></li>
-              <li><a href="#contact">联系我</a></li>
+              <li><a href="#about">关于我</a></li>
+              <li><a href="#know">心里话</a></li>
+              <li><a href="#education">教育经历</a></li>
+              <li><a href="#project">作品展现</a></li>
+              <li><a href="#skill">技能掌握</a></li>
+              <li><a href="#contact">雇佣我</a></li>
           </ul>
           <div class="login" @click="toLogin" >
             <span>登录</span>
@@ -24,89 +25,98 @@
            <div class="reverse circle"></div>
          </div>
          <div class="info">
-           <h1>{{info.Name}}</h1>
+           <!-- <transition name="custom-classes-transition" enter-active-class="animated tada" > -->
+           <h1  v-if="show">{{info.Name}}</h1>
+           <!-- </transition> -->
            <ul>
              <li class="text-hidden"><b>年龄</b> <span>{{info.age}}</span></li>
              <li class="text-hidden"><b>性别</b> <span>{{info.sex}} </span></li>
              <li class="text-hidden"><b>籍贯</b> <span>{{info.native}} </span></li>
              <li class="text-hidden"><b>住址</b> <span>{{info.address}} </span></li>
              <li class="text-hidden"><b>意向</b> <span>{{info.position}} </span></li>
+             <!-- <li class="text-hidden blog"><b>博客</b> <span><a href="http://gladys.blog.yanhuada.cn">{{info.blog}}</a> </span></li> -->
            </ul>
          </div>
        </div>
+      
     <!-- </div> -->
     </div>
 </template>
 
 <script>
+// import "@/assets/css/animated.css";
 export default {
   name: "about",
   data() {
     return {
       info: {
-        Name: "Hi,I'm Gladys",
+        Name: "Hello,I'm Gladys",
         age: "23岁",
         sex: "女",
         native: "广东茂名",
         address: "广州市天河区",
-        position: "web前端工程师"
+        position: "web前端工程师",
+        blog: "http://gladys.blog.yanhuada.cn"
       }
     };
   },
+  props: {
+    show: {}
+  },
+
   methods: {
     toLogin() {
-      // alert('哈哈哈哈1');
       this.$router.push({ name: "login" });
     }
   }
 };
 </script>
 
-<style>
+<style scoped>
 #about {
   background: url("../assets/last-pic-1.jpg");
   background-size: cover;
   height: 600px;
   width: 100%;
-  color: white;
 }
 
 .nav-center {
-  background-color: #f1f1f1;
-  opacity: 0.7;
-  border: 1px solid black;
+  background-color: #0c4b62;
   width: 100%;
   height: 50px;
   position: fixed;
   display: flex;
+  color: #f1f1f1;
+  font-size: 12px;
 }
 
 .nav-center ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin: auto;
+  margin: auto 0 auto auto;
+  /* border: 1px solid red; */
 }
 .nav-center ul li {
-  display: inline;
+  display: inline-block;
+  margin-right: 25px;
 }
 
 .nav-center ul li a {
-  padding: 14px 16px;
   text-decoration: none;
-  color: black;
+  color: #f1f1f1;
 }
 .nav-center ul li a:hover {
-  /* background-color: 	#7CCD7C; */
   color: #32cd32;
 }
-/* .nav-center ul li a:active {
-  color: #fff;
-} */
+
+.blogName {
+  margin: auto 25px;
+  height: 50px;
+}
 
 .login {
-  color: black;
-  margin: auto 20px;
+  margin: auto 25px auto 0;
 }
 
 .login:hover {
@@ -144,33 +154,33 @@ h1 {
   color: white;
 }
 .info ul {
-  margin-top: 10px;
-  /* 显示ul的上边框 */
-  border-top: 1px solid white;
-  color: white;
+  margin-top: 30px;
+  color: #000000;
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+  width: 380px;
+  background-color: #f1f1f1f1;
+  opacity: 0.7;
 }
 .info ul li {
-  font-size: 20px;
-  margin-top: 26px;
+  font-size: 18px;
+  margin: 26px 0;
+  font-family: "Overlock", cursive;
 }
+
 .info b {
   display: inline-block;
-  font-family: "Overlock", cursive;
   margin-right: 10px;
-}
-.info ul li span:hover {
-  color: #03a9f4;
 }
 
 .rotate-wrap {
-  width: 100px;
-  height: 100px;
-  /* margin: 100px; */
+  width: 50px;
+  height: 50px;
   transform-style: preserve-3d;
   animation: rotate 5s linear infinite;
   position: absolute;
-  margin-top: 100px;
-  left: 250px;
+  margin-top: 90px;
+  left: 210px;
 }
 
 .rotate-wrap:hover {
@@ -199,6 +209,11 @@ h1 {
 
 .circle {
   border-radius: 50%;
+}
+
+.blog a {
+  text-decoration: none;
+  /* color: blue; */
 }
 
 @keyframes rotate {

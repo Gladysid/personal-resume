@@ -19,29 +19,29 @@ export default {
 </script>
 
 <style scoped>
-.progress-box{
+.progress-box {
   margin-left: 30px;
-  
 }
+
 .progress-box p {
   font-size: 24px;
   color: #2f2c06;
   text-align: left;
 }
- /* .container {
+/* .container {
   border: 1px solid blue;
  } */
 .container2 {
- width: 500px;
- height: 10px;
- background-color: #e8edf2;
- border: 1px solid gray;
- border-radius: 6px;
- box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 500px;
+  height: 10px;
+  background-color: #e8edf2;
+  border: 1px solid gray;
+  border-radius: 6px;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .progress-bar {
   height: 100%;
-  background-color: #32CD32;
+  background-color: #32cd32;
 }
 .progress-bar-striped {
   background-image: linear-gradient(
@@ -53,7 +53,7 @@ export default {
     rgba(100, 247, 124, 0.15) 75%,
     transparent 75%,
     transparent
-  ); 
+  );
   background-size: 40px 40px;
 }
 @keyframes progress-bar-stripes {

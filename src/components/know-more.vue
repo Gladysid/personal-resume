@@ -1,7 +1,7 @@
 <template>
     <div id="know">
       <div class="container">
-        <span class="tip">WHY I DID</span>
+        <!-- <span class="tip">WHY I DID</span> -->
         <h1 class="title">{{title}}</h1>
         <span class="border"></span>
         <div class="a_info">
@@ -43,8 +43,7 @@ export default {
   name: "know",
   data() {
     return {
-      title: "关于我",
-
+      title: "心里话",
       swiperOption: {
         spaceBetween: 30,
         centeredSlides: true,
@@ -53,11 +52,10 @@ export default {
           delay: 2500,
           disableOnInteraction: false
         },
-        
+
         pagination: {
           el: ".swiper-pagination",
           clickable: true
-
         },
         navigation: {
           nextEl: ".swiper-button-next",
@@ -76,7 +74,7 @@ export default {
 <style  scoped>
 #know {
   width: 100%;
-  height: 710px;
+  /* height: 710px; */
   background-color: #f5f5f5;
   background-size: cover;
   text-align: center;
@@ -87,13 +85,13 @@ export default {
   margin: 0 auto;
   padding: 4% 0;
 }
-.tip {
+/* .tip {
   display: inline-block;
   position: relative;
   padding: 6px 20px;
   margin: 0 auto 10px;
   font-size: 20px;
-  background: #32CD32;
+  background: #32cd32;
   color: #fff;
 }
 .tip:after {
@@ -105,14 +103,14 @@ export default {
   content: "";
   border-style: solid;
   border-width: 10px 10px 0 10px;
-  border-color: #32CD32 transparent;
-}
+  border-color: #32cd32 transparent;
+} */
 .title {
   padding: 6px 0 10px;
-  font-family: "Times New Roman",Times,serif;
+  font-family: "Times New Roman", Times, serif;
   color: #2f2c06;
   font-size: 36px;
-  margin-top: 0;
+  margin-top: 30px;
 }
 .border {
   display: block;
@@ -130,13 +128,12 @@ export default {
   width: 40%;
   height: 5px;
   margin-top: -2px;
-  background: #32CD32;
+  background: #32cd32;
 }
 
 .a_info {
   font-size: 20px;
 }
-
 
 .swiper-container {
   width: 100%;
@@ -150,12 +147,11 @@ export default {
   /* background-color: green; */
 }
 
-#sw >>> .swiper-button-prev{
+#sw >>> .swiper-button-prev {
   background-image: url("../assets/arrow-left-2.png");
   left: 10px;
   right: auto;
 }
-
 
 #sw >>> .swiper-button-next {
   background-image: url("../assets/arrow-right-2.png");
@@ -163,9 +159,8 @@ export default {
   left: auto;
 }
 
-  #sw >>> .swiper-pagination-bullet-active {
-    color:#fff;
-    background:#32CD32 ;
-  } 
-
+#sw >>> .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #32cd32;
+}
 </style>

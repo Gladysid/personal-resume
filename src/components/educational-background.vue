@@ -1,7 +1,7 @@
 <template>
     <div id="education">
       <div class="container">
-        <span class="tip">WHERE I DID</span>
+        <!-- <span class="tip">WHERE I DID</span> -->
         <h1 class="title">{{title}}</h1>
         <span class="border"></span>
         <div class="content">
@@ -40,7 +40,7 @@ export default {
   name: "education",
   data() {
     return {
-      title: "我的经历"
+      title: "教育经历"
     };
   }
 };
@@ -49,7 +49,7 @@ export default {
 <style scoped>
 #education {
   width: 100%;
-  height: 710px;
+  /* height: 710px; */
   background-color: #fff;
   background-size: cover;
   text-align: center;
@@ -58,18 +58,18 @@ export default {
   height: auto;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4% 0;
+  padding: 5% 0;
 }
-.tip {
+/* .tip {
   display: inline-block;
   position: relative;
   padding: 6px 20px;
   margin: 0 auto 10px;
   font-size: 20px;
-  background: #32CD32;
+  background: #32cd32;
   color: #fff;
-}
-.tip:after {
+} */
+/* .tip:after {
   position: absolute;
   width: 0;
   height: 0;
@@ -78,14 +78,14 @@ export default {
   content: "";
   border-style: solid;
   border-width: 10px 10px 0 10px;
-  border-color: #32CD32 transparent;
-}
+  border-color: #32cd32 transparent;
+} */
 .title {
   padding: 6px 0 10px;
-  font-family: "Times New Roman",Times,serif;
+  font-family: "Times New Roman", Times, serif;
   color: #2f2c06;
   font-size: 36px;
-  margin-top: 0;
+  margin-top: 30px;
 }
 .border {
   display: block;
@@ -103,7 +103,7 @@ export default {
   width: 40%;
   height: 5px;
   margin-top: -2px;
-  background: #32CD32;
+  background: #32cd32;
 }
 
 .circular {
@@ -111,40 +111,42 @@ export default {
   height: 200px;
   border: 1px solid gray;
   border-radius: 50%;
-  margin: auto;
+  margin: auto 0 auto auto;
   display: flex;
 }
 .border2 {
   display: inline-block;
-  width: 100px;
+  width: 150px;
   height: 2px;
   background-color: #8c8989;
-  margin: auto;
+  margin: auto 40px;
   position: relative;
 }
 .square {
   width: 300px;
   height: 200px;
   border: 1px solid gray;
-  margin: auto;
- 
+  margin: auto auto auto 0;
+  border-radius: 5px;
+  transform: rotate(34deg);
+  -ms-transform: rotate(34deg); /* IE 9 */
+  -webkit-transform: rotate(34deg); /* Safari and Chrome */
 }
 .content {
   display: flex;
-  padding: 10%;
+  padding: 6%;
+  /* margin-top: 15px; */
 }
-.date{
+.date {
   margin: auto;
 }
-.school{
+.school {
   color: dimgray;
 }
-.school h3{
+.school h3 {
   color: black;
 }
-.school h4{
-  color: 	#FFC125;
+.school h4 {
+  color: #ffc125;
 }
-
-
 </style>

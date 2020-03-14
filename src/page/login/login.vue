@@ -8,7 +8,7 @@
        <p>Gladys的简历</p>
        <div class="loginCard">
          <p><b>登录</b></p>
-         <form class="login" v-on:submit.prevent="submit">
+         <form class="login">
             <div class="line">
               <!-- 点击了按钮并且id为空时显示“id不能为空” -->
               <div v-show="btn && !form.id">id不能为空</div>
@@ -24,7 +24,10 @@
                 <!-- <el-button type="primary">主要按钮</el-button> -->
             <!-- </el-row> -->
             <div class="line">
+              <router-link :to="{path:'/incompleted',params:{id:1}}">
                 <button class="button">登录</button>
+              </router-link>
+                <!-- <button class="button">登录</button> -->
             </div>
           </form>
        </div>
@@ -63,10 +66,11 @@ export default {
       if (!this.form.id || !this.form.psw) return;
       //  localStorage.setItem('id',this.form.id);
       //  this.$router.replace({path:'/incompleted'})
-      this.$router.push({
+      this.$router.replace({
         name: "incompleted",
-        params: {
-          id: this.form.id
+        query: {
+          id: this.form.id,
+          password: this.form.psw
         }
       });
     }

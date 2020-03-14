@@ -3,16 +3,18 @@ import Router from 'vue-router'
 import home from '@/page/home/home'
 import login from '@/page/login/login'
 import incompleted from '@/components/incompleted'
+import wxproject from '@/components/wxproject'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path:'/',
-      name:'home',
-      component:home
+      path: '/',
+      name: 'home',
+      component: home
     },
+
     {
       path: '/login',
       name: 'login',
@@ -22,6 +24,11 @@ export default new Router({
       path: '/incompleted',
       name: 'incompleted',
       component: incompleted
+    },
+    {
+      path: '/wxproject',
+      name: 'wxproject',
+      component: wxproject
     }
 
   ]
@@ -30,4 +37,3 @@ export default new Router({
 
 
 
- 

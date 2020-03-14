@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <about :show="show" />
+        <about/>
         <know-more/>
         <educational-background/>
         <project/>
@@ -8,7 +8,7 @@
         <contact/>
          <video controls autoplay muted loop preload="auto" class="video">
          <source src="../../assets/video/movie.mp4" type="video/mp4">
-      </video>                      
+      </video>                       
     </div>
     
 
@@ -25,9 +25,7 @@ import contact from "../../components/contact";
 export default {
   name: "home",
   data() {
-    return {
-      show: true
-    };
+    return {};
   },
 
   components: {
@@ -38,28 +36,21 @@ export default {
     skill,
     contact
   }
-  // created: function() {
-  //   this.$alert("欢迎进入黄观娣个人主页!", "Welcome", {
-  //     confirmButtonText: "确定",
-  //     callback: action => {
-  //       this.show = true;
-  //     }
-  //   });
-  // }
 };
 </script>
 
 <style scoped>
 .home {
   min-width: 1200px;
-  height: auto;
+  /* height: auto; */
 }
 .video {
-  width: 310px;
-  height: 180px;
+  width: 387px;
+  height: 225px;
   position: fixed;
   right: 0;
-  top: 69%;
+  top: 70%;
+  z-index: 10;
 }
 </style>
 

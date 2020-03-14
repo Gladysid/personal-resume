@@ -8,21 +8,21 @@
           <swiper id="sw" :options="swiperOption" ref="mySwiper" >
           <swiper-slide>
             <p>
-              <b>为什么想做前端工程师？？</b>
-              因为遇见，因为崇敬，因为爱好，所以我来了！
+              <b>为什么想做前端？</b>
+              因为遇见，因为兴趣，因为适合，所以我来了！
             </p>
           </swiper-slide>
 
-          <swiper-slide>
-            <p><b>我的优势？</b>拥有自主的学习能力、研究过github上开源项目、会项目部署</p>
+            <swiper-slide>
+            <p><b>让我废寝忘食的事情？</b>莫过于研究BUG~</p>
           </swiper-slide>
 
           <swiper-slide>
-            <p><b>我的缺点？</b>有点健忘，很多时候都会把要做的事情记录下来</p>
+            <p><b>让我兴奋不已的事情？</b>莫过于解决了BUG~</p>
           </swiper-slide>
 
           <swiper-slide>
-            <p><b>我的看法？</b>这个行业并没有饱和，没有最优秀，只有更优秀！</p>
+            <p><b>让我难以忘怀的事情？</b>莫过于收到您的面试邀请~</p>
           </swiper-slide>
            <!-- 实现每个点对应一个页面，点击点可以跳到相应的页面 -->
           <div class="swiper-pagination" slot="pagination"></div>
@@ -43,7 +43,7 @@ export default {
   name: "know",
   data() {
     return {
-      title: "心里话",
+      title: "畅谈天地",
       swiperOption: {
         spaceBetween: 30,
         centeredSlides: true,
@@ -74,50 +74,32 @@ export default {
 <style  scoped>
 #know {
   width: 100%;
-  /* height: 710px; */
   background-color: #f5f5f5;
   background-size: cover;
   text-align: center;
+  /* transform: scale(1.25);
+  transform-origin: center top 0px; */
 }
 .container {
   height: auto;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4% 0;
+  padding: 4.25% 0;
 }
-/* .tip {
-  display: inline-block;
-  position: relative;
-  padding: 6px 20px;
-  margin: 0 auto 10px;
-  font-size: 20px;
-  background: #32cd32;
-  color: #fff;
-}
-.tip:after {
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 42%;
-  bottom: -10px;
-  content: "";
-  border-style: solid;
-  border-width: 10px 10px 0 10px;
-  border-color: #32cd32 transparent;
-} */
+
 .title {
-  padding: 6px 0 10px;
+  padding: 8px 0 13px;
   font-family: "Times New Roman", Times, serif;
   color: #2f2c06;
-  font-size: 36px;
-  margin-top: 30px;
+  font-size: 45px;
+  margin-top: 38px;
 }
 .border {
   display: block;
-  width: 20%;
+  width: 23%;
   height: 1px;
   position: relative;
-  margin: 0 auto 30px;
+  margin: 0 auto 38px;
   background: #8c8989;
 }
 .border:after {
@@ -132,7 +114,7 @@ export default {
 }
 
 .a_info {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .swiper-container {
@@ -144,7 +126,6 @@ export default {
 }
 .swiper-pagination {
   top: 46%;
-  /* background-color: green; */
 }
 
 #sw >>> .swiper-button-prev {

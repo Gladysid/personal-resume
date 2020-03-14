@@ -14,6 +14,11 @@ export default {
     };
   },
   created: function() {
+    const downloadEle = document.querySelector("#toDownload");
+    if (!!downloadEle) {
+      downloadEle.scrollIntoView(true); // true 是默认的
+    }
+    document.querySelector("#download").scrollIntoView(true);
     //  console.log('id')
 
     // this.id = localStorage.getItem("id");

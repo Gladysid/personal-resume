@@ -1,22 +1,20 @@
 <template>
     <div id="about">
-    <!-- <div class="container"> -->
-      <!-- <slot></slot> -->
-       <div class="nav-center">
-          <div class="blogName"><h3>Gladys博客</h3></div>
+       <div class="nav-center" id="nav">
+          <div class="blogName"><h3>Gladys简历</h3></div>
           <ul>
-              <li><a href="#about">关于我</a></li>
-              <li><a href="#know">心里话</a></li>
-              <li><a href="#education">教育经历</a></li>
-              <li><a href="#project">作品展现</a></li>
-              <li><a href="#skill">技能掌握</a></li>
-              <li><a href="#contact">雇佣我</a></li>
+              <li><a @click="jump('#about')">关于我</a></li>
+              <li><a @click="jump('#know')">畅谈天地</a></li>
+              <li><a @click="jump('#education')">教育经历</a></li>
+              <li><a @click="jump('#project')">作品展现</a></li>
+              <li><a @click="jump('#skill')">技能掌握</a></li>
+              <li><a @click="jump('#contact')">雇佣我</a></li>
           </ul>
-          <div class="login" @click="toLogin" >
+          <!-- <div class="login" @click="toLogin" >
             <span>登录</span>
                  |
             <span>注册</span>
-          </div>
+          </div> -->
        </div>
        
        <div class="banner">
@@ -25,33 +23,28 @@
            <div class="reverse circle"></div>
          </div>
          <div class="info">
-           <!-- <transition name="custom-classes-transition" enter-active-class="animated tada" > -->
-           <h1  v-if="show">{{info.Name}}</h1>
-           <!-- </transition> -->
+           <h1>{{info.Name}}</h1>
            <ul>
              <li class="text-hidden"><b>年龄</b> <span>{{info.age}}</span></li>
              <li class="text-hidden"><b>性别</b> <span>{{info.sex}} </span></li>
              <li class="text-hidden"><b>籍贯</b> <span>{{info.native}} </span></li>
              <li class="text-hidden"><b>住址</b> <span>{{info.address}} </span></li>
              <li class="text-hidden"><b>意向</b> <span>{{info.position}} </span></li>
-             <!-- <li class="text-hidden blog"><b>博客</b> <span><a href="http://gladys.blog.yanhuada.cn">{{info.blog}}</a> </span></li> -->
            </ul>
          </div>
        </div>
       
-    <!-- </div> -->
     </div>
 </template>
 
 <script>
-// import "@/assets/css/animated.css";
 export default {
   name: "about",
   data() {
     return {
       info: {
-        Name: "Hello,I'm Gladys",
-        age: "23岁",
+        Name: "Hey,I'm Gladys",
+        age: "24岁",
         sex: "女",
         native: "广东茂名",
         address: "广州市天河区",
@@ -60,13 +53,17 @@ export default {
       }
     };
   },
-  props: {
-    show: {}
-  },
 
   methods: {
     toLogin() {
-      this.$router.push({ name: "login" });
+      this.$router.push({ path: "/login" });
+    },
+    jump(obj) {
+      const downloadEle = document.querySelector("#nav");
+      if (!!downloadEle) {
+        downloadEle.scrollIntoView(true); // true 是默认的
+      }
+      document.querySelector(obj).scrollIntoView(true);
     }
   }
 };
@@ -76,18 +73,19 @@ export default {
 #about {
   background: url("../assets/last-pic-1.jpg");
   background-size: cover;
-  height: 600px;
+  height: 730px;
   width: 100%;
 }
 
 .nav-center {
   background-color: #0c4b62;
   width: 100%;
-  height: 50px;
+  height: 62.5px;
   position: fixed;
   display: flex;
   color: #f1f1f1;
-  font-size: 12px;
+  font-size: 15px;
+  z-index: 10;
 }
 
 .nav-center ul {
@@ -99,7 +97,7 @@ export default {
 }
 .nav-center ul li {
   display: inline-block;
-  margin-right: 25px;
+  margin-right: 32px;
 }
 
 .nav-center ul li a {
@@ -111,12 +109,12 @@ export default {
 }
 
 .blogName {
-  margin: auto 25px;
-  height: 50px;
+  margin: auto 32px;
+  height: 62.5px;
 }
 
 .login {
-  margin: auto 25px auto 0;
+  margin: auto 32px auto 0;
 }
 
 .login:hover {
@@ -136,11 +134,11 @@ export default {
   z-index: 1;
 }
 .avator img {
-  width: 350px;
+  width: 437px;
   border: 5px solid rgba(255, 255, 255, 0.68);
   /* 实现图片变圆形，前提是图片宽度和高度相等 */
   border-radius: 50%;
-  margin-top: 30px;
+  margin-top: 37.5px;
 }
 
 .info {
@@ -149,22 +147,22 @@ export default {
   text-align: left;
 }
 h1 {
-  font-size: 34px;
+  font-size: 42px;
   font-family: "Overlock", cursive;
   color: white;
 }
 .info ul {
-  margin-top: 30px;
+  margin-top: 37.5px;
   color: #000000;
   border: 1px solid #f1f1f1;
   border-radius: 10px;
-  width: 380px;
+  width: 475px;
   background-color: #f1f1f1f1;
   opacity: 0.7;
 }
 .info ul li {
-  font-size: 18px;
-  margin: 26px 0;
+  font-size: 22px;
+  margin: 32px 0;
   font-family: "Overlock", cursive;
 }
 
@@ -174,13 +172,13 @@ h1 {
 }
 
 .rotate-wrap {
-  width: 50px;
-  height: 50px;
+  width: 63px;
+  height: 63px;
   transform-style: preserve-3d;
   animation: rotate 5s linear infinite;
   position: absolute;
-  margin-top: 90px;
-  left: 210px;
+  margin-top: 113px;
+  left: 263px;
 }
 
 .rotate-wrap:hover {
@@ -189,8 +187,8 @@ h1 {
 
 .rotate-wrap .front,
 .rotate-wrap .reverse {
-  width: 250px;
-  height: 250px;
+  width: 313px;
+  height: 313px;
   background-size: cover;
 }
 

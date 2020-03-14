@@ -1,9 +1,13 @@
 # personal-resume
+简历网站
 
+这是一个用vue框架搭建的个人简历项目
 
-哈哈哈哈哈哈
+技术栈:
+c3 h5 es6 webpack vue2 vue-router vue-awesome-swiper
 
-> A Vue.js project
+访问地址：
+https://resume.huangguandi.cn/
 
 ## Build Setup
 

@@ -48,8 +48,7 @@ export default {
         sex: "女",
         native: "广东茂名",
         address: "广州市天河区",
-        position: "web前端工程师",
-        blog: "http://gladys.blog.yanhuada.cn"
+        position: "web前端工程师"
       }
     };
   },
@@ -126,20 +125,6 @@ export default {
   padding: 10% 0;
   margin: 0 auto;
 }
-.avator {
-  float: left;
-  width: 40%;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-.avator img {
-  width: 437px;
-  border: 5px solid rgba(255, 255, 255, 0.68);
-  /* 实现图片变圆形，前提是图片宽度和高度相等 */
-  border-radius: 50%;
-  margin-top: 37.5px;
-}
 
 .info {
   float: right;
@@ -159,6 +144,7 @@ h1 {
   width: 475px;
   background-color: #f1f1f1f1;
   opacity: 0.7;
+  /* list-style-type: none; */
 }
 .info ul li {
   font-size: 22px;
@@ -172,8 +158,6 @@ h1 {
 }
 
 .rotate-wrap {
-  width: 63px;
-  height: 63px;
   transform-style: preserve-3d;
   animation: rotate 5s linear infinite;
   position: absolute;
@@ -207,11 +191,6 @@ h1 {
 
 .circle {
   border-radius: 50%;
-}
-
-.blog a {
-  text-decoration: none;
-  /* color: blue; */
 }
 
 @keyframes rotate {

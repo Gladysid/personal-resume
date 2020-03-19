@@ -6,7 +6,7 @@
         <project/>
         <skill/>
         <contact/>
-         <video controls autoplay muted loop preload="auto" class="video">
+         <video controls autoplay muted loop preload="auto" class="video" style="object-fit:cover">
          <source src="../../assets/video/movie.mp4" type="video/mp4">
       </video>                       
     </div>
@@ -51,6 +51,8 @@ export default {
   right: 0;
   top: 70%;
   z-index: 10;
+  border: 0;
+  outline: none;
 }
 </style>
 

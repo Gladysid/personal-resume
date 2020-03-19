@@ -15,6 +15,8 @@ body, html{
     
   }
 
+
+
   ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: gray;
     font-size: 15px;

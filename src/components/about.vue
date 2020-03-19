@@ -98,7 +98,9 @@ export default {
   display: inline-block;
   margin-right: 32px;
 }
-
+.active {
+  border-bottom: 2px solid #d92e2e;
+}
 .nav-center ul li a {
   text-decoration: none;
   color: #f1f1f1;

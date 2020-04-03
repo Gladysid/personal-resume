@@ -4,10 +4,10 @@
         <h2>关于娴余</h2>
         <div class="wxproTxt-box">
             <div class="wxproTxt">
-                <p><b>项目描述：</b>娴余是一个微信小程序，是一个发布闲置物品的平台，包括首页、发现、发布、消息、我的共五部分</p>
+                <p><b>项目描述：</b>娴余是一个微信小程序，是一个发布闲置物品的平台，包括首页、发现、消息、我的共四部分</p>
                 <p><b>实现技术：</b>微信小程序</p>
                 <p><b>开发工具：</b>微信开发者工具</p>
-                <p><b>技术要求：</b>①授权获取微信用户信息（包括昵称和所在城市）；②给本地数据实现刷新和继续加载效果；③横竖向滚动；④页面跳转；⑤轮播图 </p>
+                <p><b>技术要求：</b>①授权获取微信用户信息（包括昵称和所在城市）；②给本地数据实现刷新和继续加载效果；③横竖向滚动；④页面跳转；⑤轮播图；⑥分享 </p>
                 <p><b>项目收获：</b>通过开发该项目，了解了页面刷新和加载的实现以及应用云开发控制台保存图片，加深了小程序技术知识的理解和使用</p>       
             </div>
         </div>
@@ -29,6 +29,19 @@
             <div class="wxpro-img-box">
                 <div class="wxpro-img"><img src="../assets/wxpro-5.png"/></div>
                 <div class="wxpro-img wxpro"><img src="../assets/wxpro-6.png"/></div>
+            </div>
+        </div>
+
+         <div class="wxproBox">
+            <div class="wxpro-img-box">
+                <div class="wxpro-img"><img src="../assets/wxpro-7.png"/></div>
+                <div class="wxpro-img wxpro"><img src="../assets/wxpro-8.png"/></div>
+            </div>
+        </div>
+
+        <div class="wxproBox">
+            <div class="wxpro-img-box">
+                <div class="wxpro-img"><img src="../assets/wxpro-9.png"/></div>
             </div>
         </div>
     </div>

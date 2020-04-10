@@ -33,7 +33,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="less">
 #contact {
   width: 100%;
   background: url("../assets/office.jpg") no-repeat center 0px;
@@ -41,87 +41,75 @@ export default {
   text-align: center;
   /* transform: scale(1.25); */
   /* transform-origin: center top 100px; */
-}
-.container {
-  height: auto;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4.25% 0;
-}
-
-.title {
-  padding: 8px 0 13px;
-  font-family: "Times New Roman", Times, serif;
-  color: #2f2c06;
-  font-size: 45px;
-  margin-top: 38px;
-}
-.border {
-  display: block;
-  width: 23%;
-  height: 1px;
-  position: relative;
-  margin: 0 auto 38px;
-  background: #8c8989;
-}
-.border:after {
-  position: absolute;
-  top: 0;
-  left: 30%;
-  content: " ";
-  width: 40%;
-  height: 5px;
-  margin-top: -2px;
-  background: #32cd32;
-}
-.card {
-  box-shadow: 0 4px 8px 0 black;
-  transition: 0.3s;
-  width: 437.5px;
-  border-radius: 12.5px;
-  background-color: #0c4b62;
-  margin: auto;
-  font-size: 18.8px;
-}
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.card img {
-  width: 312.5px;
-}
-
-.cardContainer {
-  display: flex;
-  margin-top: 15px;
-}
-
-.card ul {
-  text-align: left;
-  list-style-type: none;
-  padding: 0 62px;
-  color: #ffffff;
-}
-
-.value1 {
-  font-size: 37px;
-}
-
-.copyright {
-  margin-top: 62.5px;
-  color: #ffffff;
-}
-
-footer {
-  margin-top: 5px;
-}
-
-footer img {
-  margin-right: 2px;
-}
-
-footer a {
-  color: #ffffff;
-  text-decoration: none;
+  .container {
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4.25% 0;
+    .title {
+      padding: 8px 0 13px;
+      font-family: "Times New Roman", Times, serif;
+      color: #2f2c06;
+      font-size: 45px;
+      margin-top: 38px;
+    }
+    .border {
+      display: block;
+      width: 23%;
+      height: 1px;
+      position: relative;
+      margin: 0 auto 38px;
+      background: #8c8989;
+    }
+    .border:after {
+      position: absolute;
+      top: 0;
+      left: 30%;
+      content: " ";
+      width: 40%;
+      height: 5px;
+      margin-top: -2px;
+      background: #32cd32;
+    }
+    .cardContainer {
+      display: flex;
+      margin-top: 15px;
+      .card {
+        box-shadow: 0 4px 8px 0 black;
+        transition: 0.3s;
+        width: 437.5px;
+        border-radius: 12.5px;
+        background-color: #0c4b62;
+        margin: auto;
+        font-size: 18.8px;
+        img {
+          width: 312.5px;
+        }
+        ul {
+          text-align: left;
+          list-style-type: none;
+          padding: 0 62px;
+          color: #ffffff;
+        }
+      }
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+    }
+    .copyright {
+      margin-top: 62.5px;
+      color: #ffffff;
+    }
+    footer {
+      margin-top: 5px;
+      img {
+        margin-right: 2px;
+      }
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+  }
 }
 </style>

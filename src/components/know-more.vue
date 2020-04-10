@@ -71,7 +71,7 @@ export default {
 };
 </script>
 
-<style  scoped>
+<style  scoped lang="less">
 #know {
   width: 100%;
   background-color: #f5f5f5;
@@ -79,55 +79,54 @@ export default {
   text-align: center;
   /* transform: scale(1.25);
   transform-origin: center top 0px; */
+  .container {
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4.25% 0;
+    .title {
+      padding: 8px 0 13px;
+      font-family: "Times New Roman", Times, serif;
+      color: #2f2c06;
+      font-size: 45px;
+      margin-top: 38px;
+    }
+    .border {
+      display: block;
+      width: 23%;
+      height: 1px;
+      position: relative;
+      margin: 0 auto 38px;
+      background: #8c8989;
+    }
+    .border:after {
+      position: absolute;
+      top: 0;
+      left: 30%;
+      content: " ";
+      width: 40%;
+      height: 5px;
+      margin-top: -2px;
+      background: #32cd32;
+    }
+    .a_info {
+      font-size: 25px;
+      .swiper-container {
+        width: 100%;
+        height: 300px;
+        line-height: 300px;
+        overflow: hidden;
+        text-align: center;
+      }
+      .swiper-pagination {
+        top: 46%;
+      }
+    }
+  }
 }
-.container {
-  height: auto;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4.25% 0;
-}
+</style>
 
-.title {
-  padding: 8px 0 13px;
-  font-family: "Times New Roman", Times, serif;
-  color: #2f2c06;
-  font-size: 45px;
-  margin-top: 38px;
-}
-.border {
-  display: block;
-  width: 23%;
-  height: 1px;
-  position: relative;
-  margin: 0 auto 38px;
-  background: #8c8989;
-}
-.border:after {
-  position: absolute;
-  top: 0;
-  left: 30%;
-  content: " ";
-  width: 40%;
-  height: 5px;
-  margin-top: -2px;
-  background: #32cd32;
-}
-
-.a_info {
-  font-size: 25px;
-}
-
-.swiper-container {
-  width: 100%;
-  height: 300px;
-  line-height: 300px;
-  overflow: hidden;
-  text-align: center;
-}
-.swiper-pagination {
-  top: 46%;
-}
-
+<style scoped>
 #sw >>> .swiper-button-prev {
   background-image: url("../assets/arrow-left-2.png");
   left: 10px;

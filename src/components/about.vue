@@ -68,139 +68,114 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="less">
 #about {
   background: url("../assets/last-pic-1.jpg");
   background-size: cover;
   height: 730px;
   width: 100%;
-}
+  .nav-center {
+    background-color: #0c4b62;
+    width: 100%;
+    height: 62.5px;
+    position: fixed;
+    display: flex;
+    color: #f1f1f1;
+    font-size: 15px;
+    z-index: 10;
+    .blogName {
+      margin: auto 32px;
+      height: 62.5px;
+    }
 
-.nav-center {
-  background-color: #0c4b62;
-  width: 100%;
-  height: 62.5px;
-  position: fixed;
-  display: flex;
-  color: #f1f1f1;
-  font-size: 15px;
-  z-index: 10;
-}
-
-.nav-center ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  margin: auto 0 auto auto;
-  /* border: 1px solid red; */
-}
-.nav-center ul li {
-  display: inline-block;
-  margin-right: 32px;
-}
-.active {
-  border-bottom: 2px solid #d92e2e;
-}
-.nav-center ul li a {
-  text-decoration: none;
-  color: #f1f1f1;
-}
-.nav-center ul li a:hover {
-  color: #32cd32;
-}
-
-.blogName {
-  margin: auto 32px;
-  height: 62.5px;
-}
-
-.login {
-  margin: auto 32px auto 0;
-}
-
-.login:hover {
-  color: #32cd32;
-}
-
-.banner {
-  max-width: 1200px;
-  padding: 10% 0;
-  margin: 0 auto;
-}
-
-.info {
-  float: right;
-  width: 60%;
-  text-align: left;
-}
-h1 {
-  font-size: 42px;
-  font-family: "Overlock", cursive;
-  color: white;
-}
-.info ul {
-  margin-top: 37.5px;
-  color: #000000;
-  border: 1px solid #f1f1f1;
-  border-radius: 10px;
-  width: 475px;
-  background-color: #f1f1f1f1;
-  opacity: 0.7;
-  /* list-style-type: none; */
-}
-.info ul li {
-  font-size: 22px;
-  margin: 32px 0;
-  font-family: "Overlock", cursive;
-}
-
-.info b {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.rotate-wrap {
-  transform-style: preserve-3d;
-  animation: rotate 5s linear infinite;
-  position: absolute;
-  margin-top: 113px;
-  left: 263px;
-}
-
-.rotate-wrap:hover {
-  animation-play-state: paused;
-}
-
-.rotate-wrap .front,
-.rotate-wrap .reverse {
-  width: 313px;
-  height: 313px;
-  background-size: cover;
-}
-
-.rotate-wrap .front {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-image: url("../assets/Me.jpg");
-}
-
-.rotate-wrap .reverse {
-  background-image: url("../assets/Me.jpg");
-}
-
-.circle {
-  border-radius: 50%;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotateY(0deg);
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      margin: auto 0 auto auto;
+      li {
+        display: inline-block;
+        margin-right: 32px;
+        a {
+          text-decoration: none;
+          color: #f1f1f1;
+        }
+        a:hover {
+          color: #32cd32;
+        }
+      }
+    }
   }
-  100% {
-    transform: rotateY(360deg);
+  .banner {
+    max-width: 1200px;
+    padding: 10% 0;
+    margin: 0 auto;
+    @keyframes rotate {
+      0% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+    .rotate-wrap {
+      transform-style: preserve-3d;
+      animation: rotate 5s linear infinite;
+      position: absolute;
+      margin-top: 113px;
+      left: 263px;
+      .circle {
+        border-radius: 50%;
+      }
+      .front,
+      .reverse {
+        width: 313px;
+        height: 313px;
+        background-size: cover;
+      }
+      .front {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: url("../assets/Me.jpg");
+      }
+      .reverse {
+        background-image: url("../assets/Me.jpg");
+      }
+    }
+    .rotate-wrap:hover {
+      animation-play-state: paused;
+    }
+    .info {
+      float: right;
+      width: 60%;
+      text-align: left;
+      h1 {
+        font-size: 42px;
+        font-family: "Overlock", cursive;
+        color: white;
+      }
+      ul {
+        margin-top: 37.5px;
+        color: #000000;
+        border: 1px solid #f1f1f1;
+        border-radius: 10px;
+        width: 475px;
+        background-color: #f1f1f1f1;
+        opacity: 0.7;
+        li {
+          font-size: 22px;
+          margin: 32px 0;
+          font-family: "Overlock", cursive;
+          b {
+            display: inline-block;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
   }
 }
 </style>

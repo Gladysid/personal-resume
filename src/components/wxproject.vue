@@ -55,43 +55,42 @@ export default {
 };
 </script>
 
-<style scoped>
-.wxpro-container {
-  padding: 0 100px;
-}
-.wxpro-container h2 {
-  text-align: center;
-  color: #32cd32;
-}
-.wxproTxt-box {
-  /* border: 1px solid black; */
-  display: flex;
-}
-.wxproTxt {
-  width: 1100px;
-  margin: auto;
-  /* border: 1px solid red; */
-}
-.wxproBox {
-  display: flex;
-  /* border: 1px solid black; */
-}
-.wxpro-img-box {
-  margin: 20px auto;
-  /* border: 1px solid red; */
-}
-
-.wxpro-img-box .wxpro {
-  margin-left: 100px;
-}
-
-.wxpro-img-box .wxpro-img {
-  display: inline-block;
-}
-
-.wxpro-img-box .wxpro-img img {
-  width: 500px;
-  height: 1000px;
+<style scoped lang="less">
+#wxproject {
+  .wxpro-container {
+    padding: 0 100px;
+    h2 {
+      text-align: center;
+      color: #32cd32;
+    }
+    .wxproTxt-box {
+      /* border: 1px solid black; */
+      display: flex;
+      .wxproTxt {
+        width: 1100px;
+        margin: auto;
+        /* border: 1px solid red; */
+      }
+    }
+    .wxproBox {
+      display: flex;
+      /* border: 1px solid black; */
+      .wxpro-img-box {
+        margin: 20px auto;
+        /* border: 1px solid red; */
+        .wxpro-img {
+          display: inline-block;
+          img {
+            width: 500px;
+            height: 1000px;
+          }
+        }
+        .wxpro {
+          margin-left: 100px;
+        }
+      }
+    }
+  }
 }
 </style>
 

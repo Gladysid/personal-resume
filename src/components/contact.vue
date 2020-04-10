@@ -15,6 +15,7 @@
           </div>
         </div>
         <div class="copyright">Copyright © 2019 - 2020 Gladys All Rights Reserved.</div>
+        <footer><img src="../assets/icp.png"/><a href="http://beian.miit.gov.cn" target="_bank">粤ICP备20012156号</a></footer>
       </div>
     </div>
 </template>
@@ -109,5 +110,18 @@ export default {
 .copyright {
   margin-top: 62.5px;
   color: #ffffff;
+}
+
+footer {
+  margin-top: 5px;
+}
+
+footer img {
+  margin-right: 2px;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
 }
 </style>

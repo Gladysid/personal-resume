@@ -7,7 +7,7 @@
         <skill/>
         <contact/>
          <video controls autoplay muted loop preload="auto" class="video" style="object-fit:cover">
-         <source src="https://gladys-1301269145.cos.ap-guangzhou.myqcloud.com/video/movie.mp4" type="video/mp4">
+         <source src="https://vardar.oss-cn-shenzhen.aliyuncs.com/gladys/online_images/resume_img/dayu_video.mp4" type="video/mp4">
       </video>                       
     </div>
     

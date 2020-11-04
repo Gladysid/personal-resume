@@ -10,20 +10,20 @@
 export default {
   data() {
     return {
-      id: ""
-    };
+      id: ''
+    }
   },
   created: function() {
-    const downloadEle = document.querySelector("#toDownload");
-    if (!!downloadEle) {
-      downloadEle.scrollIntoView(true); // true 是默认的
-    }
-    document.querySelector("#download").scrollIntoView(true);
+    // const downloadEle = document.querySelector('#toDownload')
+    // if (!!downloadEle) {
+    //   downloadEle.scrollIntoView(true) // true 是默认的
+    // }
+    // document.querySelector('#download').scrollIntoView(true)
     //  console.log('id')
 
     // this.id = localStorage.getItem("id");
 
-    this.id = this.$route.params.id;
+    this.id = this.$route.query.id //获取传过来的参数
   }
   // methods: {
   //   getId() {
@@ -32,7 +32,7 @@ export default {
   //    console.log(id)
   //   }
   // }
-};
+}
 </script>
 
 <style>

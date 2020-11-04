@@ -39,38 +39,38 @@
 
 <script>
 export default {
-  name: "about",
+  name: 'about',
   data() {
     return {
       info: {
         Name: "Hey,I'm Gladys",
-        age: "24岁",
-        sex: "女",
-        native: "广东茂名",
-        address: "广州市天河区",
-        position: "web前端工程师"
+        age: '24岁',
+        sex: '女',
+        native: '广东茂名',
+        address: '广州市天河区',
+        position: 'web前端工程师'
       }
-    };
+    }
   },
 
   methods: {
     toLogin() {
-      this.$router.push({ path: "/login" });
+      this.$router.push({ path: '/login' })
     },
     jump(obj) {
-      const downloadEle = document.querySelector("#nav");
+      const downloadEle = document.querySelector('#nav')
       if (!!downloadEle) {
-        downloadEle.scrollIntoView(true); // true 是默认的
+        downloadEle.scrollIntoView(true) // true 是默认的
       }
-      document.querySelector(obj).scrollIntoView(true);
+      document.querySelector(obj).scrollIntoView(true)
     }
   }
-};
+}
 </script>
 
 <style scoped lang="less">
 #about {
-  background: url("../assets/last-pic-1.jpg");
+  background: url('../assets/last-pic-1.jpg');
   background-size: cover;
   height: 730px;
   width: 100%;
@@ -139,10 +139,10 @@ export default {
         left: 0;
         bottom: 0;
         right: 0;
-        background-image: url("../assets/Me.jpg");
+        background-image: url('../assets/Me.jpg');
       }
       .reverse {
-        background-image: url("../assets/Me.jpg");
+        background-image: url('../assets/Me.jpg');
       }
     }
     .rotate-wrap:hover {
@@ -154,7 +154,7 @@ export default {
       text-align: left;
       h1 {
         font-size: 42px;
-        font-family: "Overlock", cursive;
+        font-family: 'Overlock', cursive;
         color: white;
       }
       ul {
@@ -168,7 +168,7 @@ export default {
         li {
           font-size: 22px;
           margin: 32px 0;
-          font-family: "Overlock", cursive;
+          font-family: 'Overlock', cursive;
           b {
             display: inline-block;
             margin-right: 10px;

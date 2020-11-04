@@ -24,10 +24,10 @@
                 <!-- <el-button type="primary">主要按钮</el-button> -->
             <!-- </el-row> -->
             <div class="line">
-              <router-link :to="{path:'/incompleted',params:{id:1}}">
+              <!-- <router-link :to="{path:'/incompleted',params:{id:1}}">
                 <button class="button">登录</button>
-              </router-link>
-                <!-- <button class="button">登录</button> -->
+              </router-link> -->
+                <button class="button" @click="submit">登录</button>
             </div>
           </form>
        </div>
@@ -46,8 +46,8 @@ export default {
     return {
       btn: false, //true已经提交过，false没有提交过
       form: {
-        id: "",
-        psw: ""
+        id: '',
+        psw: ''
       }
       //    back:{
       //        backgroundImage:"url(" + require('../../assets/background-pic.jpg') + ")",
@@ -55,27 +55,29 @@ export default {
       //        backgroundSize:"100% 100%",
 
       //    }
-    };
+    }
   },
 
-  name: "back",
+  name: 'back',
 
   methods: {
     submit() {
-      this.btn = true;
-      if (!this.form.id || !this.form.psw) return;
+      this.btn = true
+      if (!this.form.id || !this.form.psw) return
       //  localStorage.setItem('id',this.form.id);
       //  this.$router.replace({path:'/incompleted'})
+
+      // console.log('id是：' + this.form.id)
       this.$router.replace({
-        name: "incompleted",
+        name: 'incompleted',
         query: {
-          id: this.form.id,
-          password: this.form.psw
+          id: this.form.id
+          // password: this.form.psw
         }
-      });
+      })
     }
   }
-};
+}
 </script>
 
 <style lang="less" scoped>

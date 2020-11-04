@@ -12,8 +12,8 @@
           </div>
           <div class="imgbox project2">            
             <img src="../assets/project2.jpg" alt="项目配图"/>
-            <a>
-              <div class="mask"><span><h4>H5购物车页面</h4>添加、删除选购物品~</span></div>
+            <a href="http://ebook.huangguandi.cn/">
+              <div class="mask"><span><h4>H5页面</h4>翻页、字号设置、主体设置等~</span></div>
             </a>
           </div>
           <div class="imgbox project3" @click="toWXpro">            
@@ -29,18 +29,19 @@
 
 <script>
 export default {
-  name: "project",
+  name: 'project',
   data() {
     return {
-      title: "作品展现"
-    };
+      title: '作品展现'
+    }
   },
   methods: {
     toWXpro() {
-      this.$router.push({ path: "/wxproject" });
+      this.$router.push({ path: '/wxproject' })
     }
   }
-};
+}
+// debugger
 </script>
 
 <style scoped lang="less">
@@ -58,7 +59,7 @@ export default {
     padding: 4.25% 0;
     .title {
       padding: 8px 0 13px;
-      font-family: "Times New Roman", Times, serif;
+      font-family: 'Times New Roman', Times, serif;
       color: #2f2c06;
       font-size: 45px;
       margin-top: 38px;
@@ -75,7 +76,7 @@ export default {
       position: absolute;
       top: 0;
       left: 30%;
-      content: " ";
+      content: ' ';
       width: 40%;
       height: 5px;
       margin-top: -2px;
